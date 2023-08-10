@@ -1,5 +1,6 @@
 const express = require('express');
 const userController = require('./controllers/user');
+const quizAttemptController = require('./controllers/quiz_attempt');
 const addModelsToRequest = require('./middleware/add-models-to-request');
 const checkAuthentication = require('./middleware/check-authentication');
 
@@ -20,5 +21,9 @@ Router.patch('/users/:id', checkAuthentication, userController.update);
 Router.get('/logged-in-secret', checkAuthentication, (req, res) => {
   res.send({ msg: 'The secret is: there is no secret.' });
 });
+Router.post('/quiz-attempts', quizAttemptController.create);
+Router.get('/quiz-attempts/:id', quizAttemptController.find);
+Router.get('/quiz-attempts', quizAttemptController.list);
+
 
 module.exports = Router;
