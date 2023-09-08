@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { useNavigate, Navigate, Link } from "react-router-dom";
 import CurrentUserContext from "../contexts/current-user-context";
 import { createUser } from "../adapters/user-adapter";
+import "../styles/signup.css";
 
 // Controlling the signup form is a good idea because we want to adde (eventually)
 // more validation and provide real time feedback to the user about usernames and passwords
@@ -36,24 +37,27 @@ export default function SignUpPage() {
   };
 
   return <>
-    <h1>Sign Up</h1>
     <form onSubmit={handleSubmit} onChange={handleChange}>
-      <label htmlFor="username">Username</label>
+    <h1>Sign Up</h1>
+    <h5>Sign up to start your adventure!</h5>
+      {/* <label htmlFor="username">Username</label> */}
       <input
         autoComplete="off"
         type="text"
         id="username"
         name="username"
+        placeholder="Username"
         onChange={handleChange}
         value={username}
       />
 
-      <label htmlFor="password">Password</label>
+      {/* <label htmlFor="password">Password</label> */}
       <input
         autoComplete="off"
         type="password"
         id="password"
         name="password"
+        placeholder="Password"
         onChange={handleChange}
         value={password}
       />
@@ -63,9 +67,9 @@ export default function SignUpPage() {
         <input autoComplete="off" type="password" id="password-confirm" name="passwordConfirm" />
       */}
 
-      <button>Sign Up Now!</button>
+      <button className="signup-button">Sign Up!</button>
+      <p>Already have an account with us? <Link to="/login" className="link">Log in!</Link></p>
     </form>
     { !!errorText && <p>{errorText}</p> }
-    <p>Already have an account with us? <Link to="/login">Log in!</Link></p>
   </>;
 }

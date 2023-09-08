@@ -1,0 +1,126 @@
+ .profile-username {
+    text-transform: capitalize;
+ }
+
+ .user {
+    background-color: white;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+ }
+
+ .aurora {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ /*   Progress Report */ 
+ 
+ .progress {
+    border: 1px solid #959595;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .skills h2  {
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-top: 40px;
+    margin-bottom: 5px;
+    color: orangered;
+    font-size: 16px;;
+ }
+
+ .progress-bar {
+    background-color: #959595;
+    width: 600px;
+    height: 10px;
+    border-radius: 5px;
+ }
+
+ .progress-bar div {
+    height: 10px;
+    border-radius: 5px;
+    width: 0%;
+ }
+
+ .progress-bar div span {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    float: right;
+    margin-top: -15px;
+    margin-right: -20px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .addition-report {
+    background-color: #35f6ea;
+    animation: addition-report 1s linear forwards;
+ }
+
+ .subtraction-report {
+    background-color: #ffe000;
+    animation: subtraction-report 1s linear forwards;
+ }
+
+ .multiplication-report {
+    background-color: #ff3399;
+    animation: multiplication-report 1s linear forwards;
+ }
+
+ .division-report {
+    background-color: #c9f153;
+    animation: division-report 1s linear forwards;
+ }
+
+ .addition-report span {
+    border: 1px solid #35f6ea;
+ }
+
+ .subtraction-report span {
+    border: 1px solid #ffe000;
+ }
+
+ .multiplication-report span {
+    border: 1px solid #ff3399;
+ }
+
+ .division-report span {
+    border: 1px solid #c9f153;
+ }
+
+ @keyframes addition-report {
+   100% {
+     width: var(--addition-percentage);
+   }
+ }
+
+ @keyframes subtraction-report {
+    100% {
+        width: var(--subtraction-percentage);
+    }
+ }
+
+ @keyframes multiplication-report {
+    100% {
+        width: var(--multiplication-percentage);
+    }
+ }
+
+ @keyframes division-report {
+    100% {
+        width: var(--division-percentage);
+    }
+ }

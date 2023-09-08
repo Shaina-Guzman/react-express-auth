@@ -1,0 +1,285 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  margin: 0;
+  padding: 0 !important;
+}
+
+body {
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  margin: 0;
+  background-image: url('https://static.vecteezy.com/system/resources/previews/013/138/406/original/meadow-panorama-3d-illustration-fantastic-landscape-with-rainbow-on-green-valley-kids-background-colorful-cute-scenery-with-flowers-spring-grass-blue-sky-for-children-s-sites-or-printing-free-vector.jpg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+  color: #555555;
+  height: 100vh;
+}
+
+input, label {
+  display: block;
+}
+
+input {
+  margin-bottom: 1rem;
+}
+/* Added*/
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: inherit;
+}
+
+/* * {
+  box-sizing: border-box;
+} */
+
+:root {
+  --menuWidth: 150px;
+  
+}
+
+#root {
+  height: 100%;
+}
+
+.menu {
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+.menu-title {
+  display: block;
+  width: 360px;
+  height: 70px;
+  padding: 12px 0 0;
+  background: #c9f153;
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.3s background-color;
+}
+
+.menu-title:before {
+  content: "";
+  display: block;
+  height: 0;
+  border-top: 5px solid #c9f153;
+  border-left: 180px solid transparent;
+  border-right: 180px solid transparent;
+  border-bottom: 0 solid #dddddd;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 101;
+  transition: 0.2s 0.2s border-top ease-out, 0.3s border-top-color;
+}
+
+main {
+  height: 100%;
+}
+
+.menu-title:hover {
+  background: hsl(80, 95%, 60%);
+}
+.menu-title:hover:before {
+  border-top-color: hsl(80, 95%, 60%);
+}
+
+.menu:hover > .menu-title:before {
+  border-top-width: 0;
+  transition: 0.2s border-top-width ease-in, 0.3s border-top-color;
+}
+
+.menu-title:after {
+  content: "";
+  display: block;
+  height: 0;
+  border-left: 180px solid transparent;
+  border-right: 180px solid transparent;
+  border-bottom: 0 solid #ebebeb;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 101;
+  transition: 0.2s border-bottom ease-in;
+}
+
+.menu:hover > .menu-title:after {
+  border-bottom-width: 5px;
+  transition: 0.2s 0.2s border-bottom-width ease-out;
+}
+
+.menu-title_2nd {
+  background: #35f6ea;
+}
+.menu-title_2nd:hover {
+  background: hsl(186, 80%, 65%) ;
+}
+.menu-title_2nd:before {
+  border-top-color: #35f6ea;
+}
+.menu-title_2nd:hover:before {
+  border-top-color: hsl(186, 80%, 65%);
+}
+
+.menu-title_3rd {
+  background: #ff3399;
+}
+.menu-title_3rd:hover {
+  background: hsl(336, 100%, 70%);
+}
+.menu-title_3rd:before {
+  border-top-color: #ff3399;
+}
+.menu-title_3rd:hover:before {
+  border-top-color: hsl(336, 100%, 70%)
+}
+
+.menu-title_4th {
+  background: #ffe000;
+}
+.menu-title_4th:hover {
+  background: hsl(56, 100%, 70%);
+}
+.menu-title_4th:before {
+  border-top-color: #ffe000;
+}
+.menu-title_4th:hover:before {
+  border-top-color: hsl(56, 100%, 70%);
+}
+
+.menu-dropdown {
+  min-width: 100%;
+  padding: 15px 0;
+  position: absolute;
+  background: #ebebeb;
+  z-index: 100;
+  transition: 0.5s padding, 0.5s background;
+}
+
+.menu-dropdown:after {
+  content: "";
+  display: block;
+  height: 0;
+  border-top: 5px solid #ebebeb;
+  border-left: 180px solid transparent;
+  border-right: 180px solid transparent;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 101;
+  transition: 0.5s border-top;
+}
+
+.menu:not(:hover) > .menu-dropdown {
+  padding: 4px 0;
+  background: #dddddd;
+  z-index: 99;
+}
+
+.menu:not(:hover) > .menu-dropdown:after {
+  border-top-color: #dddddd;
+}
+
+.menu:not(:hover) > .menu-title:after {
+  border-bottom-color: #dddddd;
+}
+
+.menu-dropdown > * {
+  overflow: hidden;
+  height: 30px;
+  padding: 5px 10px;
+  background: rgba(0, 0, 0, 0);
+  white-space: nowrap;
+  transition: 0.5s height cubic-bezier(0.73, 0.32, 0.34, 1.5),
+    0.5s padding cubic-bezier(0.73, 0.32, 0.34, 1.5),
+    0.5s margin cubic-bezier(0.73, 0.32, 0.34, 1.5), 0.5s 0.2s color,
+    0.2s background-color;
+}
+
+.menu-dropdown > *:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.menu:not(:hover) > .menu-dropdown > * {
+  visibility: hidden;
+  height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 0;
+  color: rgba(25, 25, 25, 0);
+  transition: 0.5s 0.1s height, 0.5s 0.1s padding, 0.5s 0.1s margin, 0.3s color,
+    0.6s visibility;
+  z-index: 99;
+}
+
+.hList {
+  list-style: none;
+}
+
+.hList > * {
+  float: left;
+}
+
+.hList > * + * {
+  margin-left: 0;
+}
+
+
+
+
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 0.5rem 1rem;
+  background: #c9f153;
+ border-radius: 0px 0px 15px 15px; */
+}
+
+ nav ul {
+  display: flex;
+  /* gap: 1rem; */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+} 
+
+nav a {
+  display: block;
+  color: #FFF;
+  font-size: 35px;
+  padding-top: 10px;
+} 
+
+/* automatically added by NavLink component */
+
+button {
+  font-family: monospace;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #ffe000;
+  border: none;
+  box-shadow: 0 9px #efc207;
+}
+
+button:active {
+  background-color: #ffe000;
+  box-shadow: 0 5px #efc207;
+  transform: translateY(4px);
+}
+
+

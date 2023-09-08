@@ -1,0 +1,83 @@
+form {
+  color: #efc207;
+  padding: 30px 40px;
+  border: 0.2px solid white;
+  border-radius: 0.5rem;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  margin: auto; 
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1, h5 {
+    text-align: center;
+    font-family: monospace;
+    letter-spacing: 5px;
+    animation: colorRotate 6s linear 0s infinite;
+    text-shadow: rgba(0, 0, 0, 0.2);
+  }
+  
+  h5 {
+    margin-top: 0;
+    font-size: 11.8px;
+  }
+  
+  @keyframes colorRotate {
+    from {
+      color: #6666ff;
+    }
+    10% {
+      color: #0099ff;
+    }
+    50% {
+      color: #00ff00;
+    }
+    75% {
+      color: #ff3399;
+    }
+    100% {
+      color: #6666ff;
+    }
+  }
+  
+  .login-button {
+    display: inline-block; 
+    padding: 15px 35px;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .link {
+    text-decoration: none;
+    color: white;
+  }
+
+  #username, #password {
+    background-color: transparent;
+    color: #efc207;
+    border-radius: 25px;
+    outline: none;
+    padding: 0.5rem;
+    width: 15rem;
+    border: solid 1px white;
+    margin-bottom: 2rem;
+  }
+  
+  #username::placeholder, #password::placeholder {
+    color: #efc207;
+    font-family: monospace;
+  }
+  
+  #username {
+    margin-bottom: 1.5rem;
+  }
+
+  

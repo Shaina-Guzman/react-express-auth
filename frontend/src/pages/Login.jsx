@@ -1,7 +1,9 @@
 import { useContext, useState } from "react";
 import { useNavigate, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { logUserIn } from "../adapters/auth-adapter";
 import CurrentUserContext from "../contexts/current-user-context";
+import "../styles/login.css";
 
 export default function LoginPage() {
   const navigate = useNavigate();
@@ -21,16 +23,19 @@ export default function LoginPage() {
   if (currentUser) return <Navigate to="/" />;
 
   return <>
+    <form onSubmit={handleSubmit} className="login-form">
     <h1>Login</h1>
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="username">Username</label>
-      <input type="text" autoComplete="username" id="username" name="username" />
+    <h5>Login to continue your adventure!</h5>
+      {/* <label htmlFor="username">Username</label> */}
+      <input type="text" autoComplete="username" id="username" name="username" placeholder="Username" />
 
-      <label htmlFor="password">Password</label>
-      <input type="password" autoComplete="current-password" id="password" name="password" />
+      {/* <label htmlFor="password">Password</label> */}
+      <input type="password" autoComplete="current-password" id="password" name="password" placeholder="Password" />
 
-      <button>Log in!</button>
+      <button className="login-button">Log in!</button>
+      <p>Don't have an account with us? <Link to="/sign-up" className="link">Sign up!</Link></p>
     </form>
+
     { !!errorText && <p>{errorText}</p> }
   </>;
 }

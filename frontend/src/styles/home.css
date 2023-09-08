@@ -1,0 +1,46 @@
+/* main {
+    display: flex; 
+    width: 100vw;
+    height: 93.3vh;
+    flex-direction:  column;
+    justify-content: flex-end; 
+  } */
+
+.button-card {
+  width: 600px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0 20px 0;
+}
+
+.arithmetic {
+    width: 600px;
+    height: 500px;
+    /* background-color: #ff3399; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 20px;
+    margin: auto;
+  }
+
+.home {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo{
+  height: 100px;
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 200px;
+}
+
+.home-title {
+  font-size: 30px;
+  margin: 20px 0 20px 0;
+}
