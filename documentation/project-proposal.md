@@ -1,66 +1,45 @@
-### 🏙️ Mission Statement
-Clearly state the purpose and objectives of the project in a straightforward manner. Avoid unnecessary jargon or technical language that might confuse readers.
-* Keep it concise (1-3 sentences)
-
-*Example:* At Prints For A Purpose, our mission is to connect individuals in need of assistive devices with a compassionate global community of skilled builders. Using 3D printing technology, we can create affordable solutions that enhance independence and transform lives.
+### ➕ Mission Statement
+With Digi-Buddies, our mission is to create a space where learning math becomes an exciting adventure! We are dedicated to creating a dynamic learning environment where users can strengthen their arithmetic skills through interactive quizzes and engaging videos.
 ___
 
-### 🚀 Problem Statement
+### ➖ Problem Statement
 
-Clearly define the problem or challenge your project aims to address. Explain why this problem is important and how your project will provide a solution.
-* Who the application's audience is
-* What the application does for the user
-* Why the user would use the application
-
-*Example:* Our application would mainly serve individuals with disability or mobility issues under financial or physical constraints. A priority would be those who live in underprivileged communities, conflict-affected areas, or communities with limited healthcare infrastructure. Our product will leverage the power of technology and community collaboration to make assistive devices more accessible and affordable to those in need. This is done by connecting individuals to a network of builders who facilitate the creation and distribution of affordable, 3D-printed devices.
+Our mission is to make math an exciting adventure, we recognize that children of varying abilities deserve an inclusive and engaging learning experience. Our solution leverages interactive videos and quizzes to empower all young learners, cultivating a passion for arithmetic and fostering foundational skills in a dynamic online environment.
 ___
 
+### ✖️ Features & User Stories
+* **User Authentication:** Allow users to create accounts and log in securely.
+* **User Profiles:** Provide each user with a profile page to track their progress and manage settings.
+* **Name and Avatar:** Allow users to personalize their profiles with a name and avatar.
+* **Video Progress Tracking:** Enable users to see their progress in watching educational videos.
+* **Scores on Quizzes:** Display users' scores and achievements on completed quizzes.
+* **Learning Tools (Videos):** Include educational videos that cover arithmetic topics (addition, subtraction, division, multiplication).
+* **Multiple Choice Quiz:** Offer interactive quizzes with multiple-choice questions for practice.
+* **Timed Mode:** Provide an option for users to take quizzes under a time constraint for added challenge.
+* **Kahoot-Style Competitive Mode:** Introduce a competitive mode where users can challenge friends or other users in a lively and engaging quiz environment.
+__
 
-### 📝 Features & User Stories
-* Describes all the features and their purpose.
-* For each feature, outline the user flow.
-* Identify features required for a MVP
-
-
-Example: 
-
-* **User Profile Page (MVP)**: Users can sign into the application to see their home page. The home page will display all of their blog posts and settings for updating their profile.
-* **Other User Profile Page (MVP)**: Users can see a directory of all users in the application. Clicking on their name will take the user to view the profile of that user.
-* **Live Chat (MVP)**: Users can start a chat with another user. This chat will have live updates and all messages will be saved.
-* **Chatbot (Stretch)**: Users can navigate to the `/chat` page to interact with a chatbot powered by ChatGPT.
-
+### ➗ Tech Stack: 
+We intend on using React for the front end, Node.js and Express for the backend, and PostgreSQL for the database.
 ___
 
-
-### 📚 Tech Stack: 
-Clearly state the technologies, frameworks, and tools you intend to use for the front-end and back-end development.
-
-*Example:* We intend on using React for the front end, Node.js and Express for the backend, and PostgreSQL for the database. We will also incorporate Socket.io to implement the live chat feature and ChatGPT to implement the chatbot feature.
-
+### 🔢 Milestones and Timeline: 
+* **By August 8:** Project Proposal will be completed.
+* **By August 9:** ERM and Wireframes will be completed.
+* **By August 24:** the MVP will be complete. 
+* **By August 31:** the final CSS styling will be applied.
 ___
 
-### 🗓️ Milestones and Timeline: 
-Break down the project into smaller milestones and outline a timeline for achieving them. Which features will you prioritize and by when will you complete them? Remember, you will have 5 weeks to complete this project. The first week will be spent planning and the remaining 4 will be spent building.
-
-*Example:* 
-* By June 5: the MVP will be complete. Users will be able to post blogs and see them appear on their profile
-* By June 15: the chat feature will be complete. Users will be able to chat with other users.
-* By June 25: the chatbot powered by ChatGPT will be complete.
-* By June 31: the final CSS styling will be applied.
+### 🟰 Data Sources (if applicable): 
+This application will utilize YouTube videos that cover arithmetic topics.
 ___
 
-### 💽 Data Sources (if applicable): 
-If your project involves using specific data sources or APIs, mention them and explain how you plan to integrate them into your project.
-
-*Example:* This application will utilize the WeatherAPI API to retrieve live weather data based on the user's current location. We will use the WebLocation API to get the user's current location.
-___
-
-### 🤝 Team and Responsibilities (if applicable): 
-If you are working in a team, specify the roles and responsibilities of each team member and how you will collaborate throughout the project.
-
-*Example:* The team working on this project will consist of Ben Spector and Reuben Ogbonna. We will collaborate using Github Project boards to manage our tasks, Slack for communication, and Github to manage changes to the codebase. Reuben will primarily focus on building the blog feature while Ben will focus on building the live chat feature.
+### ☁️ MVP & Future Scope: 
+* **Kahoot-Style Competitive Mode:** Introduce a competitive mode where users can challenge friends or other users in a lively and engaging quiz environment.
+* **Video Progress Tracking:** Enable users to see their progress in watching educational videos.
+* **Timed Mode:** Provide an option for users to take quizzes under a time constraint for added challenge.
 
 ___
 
-### 📓 References and Citations: 
-If you have taken inspiration from existing projects or research, provide proper references and citations to give credit to the original sources.
+### 💭 References and Citations: 
+Our application has been inspired by Kahoot.
