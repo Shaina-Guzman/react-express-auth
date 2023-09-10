@@ -2,9 +2,10 @@ const knex = require('../knex');
 
 class Quizzes {
 
-  constructor({ id, topic }) {
+  constructor({ id, topic , url}) {
     this.id = id;
     this.topic = topic;
+    this.url = url;
   }
 
   static async list() {
@@ -29,17 +30,19 @@ class Quizzes {
     }
   }
 
-  static async create(topic) {
+  static async create(topic, url) {
     try {
-      const query = `INSERT INTO quizzes (topic)
-        VALUES (?) RETURNING *`;
-      const { rows: [quizzes] } = await knex.raw(query, [topic]);
+      const query = `INSERT INTO quizzes (topic, url)
+        VALUES (?, ?) RETURNING *`;
+      const { rows: [quizzes] } = await knex.raw(query, [topic, url]);
       return new Quizzes(quizzes);
     } catch(error) {
       console.log(error);
       return null;
     }
   }
+
+  
   static async deleteAll() {
     try {
       return knex('quizzes').del();

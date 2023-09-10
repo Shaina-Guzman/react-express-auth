@@ -4,6 +4,7 @@ const quizAttemptController = require('./controllers/quiz_attempt');
 const addModelsToRequest = require('./middleware/add-models-to-request');
 const checkAuthentication = require('./middleware/check-authentication');
 const quizQuestionController = require('./controllers/quiz_question');
+const videoController = require('./controllers/video');
 
 const Router = express.Router();
 Router.use(addModelsToRequest);
@@ -35,5 +36,7 @@ Router.get('/quiz-attempts/:id', quizAttemptController.find);
 
 Router.get('/quiz-questions/:quiz_id', quizQuestionController.find);
 Router.get('/quiz-questions', quizQuestionController.list);
+
+Router.get('/video/:id', videoController.find); 
 
 module.exports = Router;

@@ -6,6 +6,8 @@ import { logUserOut } from "../adapters/auth-adapter";
 import { getAverageQuizScore } from "../adapters/quiz-adapter";
 import UpdateUsernameForm from "../components/UpdateUsernameForm";
 import "../styles/user.css";
+import Five from "../media/five.png";
+import Six from "../media/six.png";
 
 export default function UserPage() {
   const navigate = useNavigate();
@@ -62,20 +64,22 @@ export default function UserPage() {
   if (!userProfile && !errorText) return null;
   if (errorText) return <p>{errorText}</p>;
 
-  // What parts of state would change if we altered our currentUser context?
-  // Ideally, this would update if we mutated it
-  // But we also have to consider that we may NOT be on the current users page
   const profileUsername = isCurrentUserProfile
     ? currentUser.username
     : userProfile.username;
 
   return (
-    <>
+    <div className="user-main">
+      <div className="aurora"
+        ></div>
       <div className="user">
+        <div className="progress-header">
+        <img className="img-1" src={ Five } height={100}/>
         <h1 className="profile-username">
-          {profileUsername}'s Progress Report
+          {profileUsername}'s <br></br> Progress Report
         </h1>
-
+        <img className="img-1" src={ Six } height={100}/>
+        </div>
         {/* { !!isCurrentUserProfile && <button onClick={handleLogout}>Log Out</button> }
     <p>If the user had any data, here it would be</p>
     <p>Fake Bio or something</p> */}
@@ -85,7 +89,7 @@ export default function UserPage() {
     } */}
         <div className="progress">
           <div className="skills">
-            <h2>Addition</h2>
+            <h2 style={{ color: "#35f6ea" }}>Addition</h2>
             <div className="progress-bar">
               <div className="addition-report">
                 {averageScores && averageScores[0] && (
@@ -96,7 +100,7 @@ export default function UserPage() {
               </div>
             </div>
 
-            <h2>Subtraction</h2>
+            <h2 style={{ color: "#ffe000" }}>Subtraction</h2>
             <div className="progress-bar">
               <div className="subtraction-report">
                 {averageScores && averageScores[1] && (
@@ -107,7 +111,7 @@ export default function UserPage() {
               </div>
             </div>
 
-            <h2>Multiplication</h2>
+            <h2 style={{ color: "#ff3399" }}>Multiplication</h2>
             <div className="progress-bar">
               <div className="multiplication-report">
                 {averageScores && averageScores[2] && (
@@ -120,7 +124,7 @@ export default function UserPage() {
               </div>
             </div>
 
-            <h2>Division</h2>
+            <h2 style={{ color: "#c9f153" }}>Division</h2>
             <div className="progress-bar">
               <div className="division-report">
                 {averageScores && averageScores[3] && (
@@ -132,12 +136,7 @@ export default function UserPage() {
             </div>
           </div>
         </div>
-        <img
-          className="aurora"
-          src="https://clipartix.com/wp-content/uploads/2018/03/cartoon-girl-clipart-2018-4.png"
-          height={400}
-        />
       </div>
-    </>
+    </div>
   );
 }

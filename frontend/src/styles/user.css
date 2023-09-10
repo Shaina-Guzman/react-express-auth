@@ -1,41 +1,64 @@
  .profile-username {
     text-transform: capitalize;
+    /* margin-top: 35px; */
  }
 
  .user {
     background-color: white;
-    margin: auto;
-    margin-top: 20px;
+    /* margin: auto;
+    margin-top: 0px;
     margin-bottom: 40px;
-    width: 90%;
+    margin-right: 200px; */
+    width: 45%;
+    height: 70%;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
  }
 
- .aurora {
-    margin: auto;
+ .user-main{
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    width: 100vw;
+    height: 100vh;
+    gap: 80px;
+ }
+
+ .aurora {
+    background-image: url("https://clipartix.com/wp-content/uploads/2018/03/cartoon-girl-clipart-2018-4.png");
+   width: 400px;
+   height: 600px;
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
  }
  /*   Progress Report */ 
  
+ .progress-header{
+   display: flex;
+   justify-content: space-evenly;
+   margin-top: 35px;
+   align-items: center;
+ }
+
  .progress {
-    border: 1px solid #959595;
+    /* border: 1px solid blue; */
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
  }
 
  .skills h2  {
     font-weight: 400;
     letter-spacing: 2px;
     margin-top: 40px;
-    margin-bottom: 5px;
-    color: orangered;
-    font-size: 16px;;
+    margin-bottom: 25px;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif !important;
  }
 
  .progress-bar {

@@ -6,6 +6,7 @@ exports.up = (knex) => {
     return knex.schema.createTable('quizzes', (table) => {
         table.increments();
         table.string('topic').notNullable();
+        table.string('url').notNullable();
     })
 };
 
